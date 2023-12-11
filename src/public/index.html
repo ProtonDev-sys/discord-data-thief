@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Download</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>File Upload</h1>
+        <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file" required hidden>
+            <label for="file" class="file-label">Choose a file</label>
+            <div id="fileInfo"></div>
+            <progress id="uploadProgress" value="0" max="100" style="width:100%; display: none;"></progress>
+            <button type="submit">Upload</button>
+        </form>        
+    </div>
+    <div class="file-list">
+        <h2>Uploaded Files</h2>
+        <ul id="fileList">
+            <!-- File items will be added here dynamically -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
